@@ -1,12 +1,25 @@
-group 'pro.elnur'
-version '1.0-SNAPSHOT'
+apply plugin: 'spring-boot'
 
-apply plugin: 'java'
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE'
+    }
+}
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:1.2.7.RELEASE'
+    compile 'org.postgresql:postgresql:9.4-1204-jdbc42'
+    compile 'org.flywaydb:flyway-core:3.2.1'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test:1.2.7.RELEASE'
+    testCompile 'com.jayway.restassured:rest-assured:2.6.0'
 }

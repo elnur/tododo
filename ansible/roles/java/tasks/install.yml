@@ -1,0 +1,2 @@
+- name: Install Java 8
+  apt: pkg=oracle-java8-installer
