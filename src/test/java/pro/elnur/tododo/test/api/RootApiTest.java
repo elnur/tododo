@@ -14,9 +14,9 @@ import static com.jayway.restassured.RestAssured.when;
 @SpringApplicationConfiguration(classes = Application.class)
 @IntegrationTest
 @WebAppConfiguration
-public class HomeApiTest {
+public class RootApiTest {
     @Test
-    public void home() {
+    public void root() {
         // @formatter:off
         when()
             .get("/")
