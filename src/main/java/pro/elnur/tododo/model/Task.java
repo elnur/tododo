@@ -8,7 +8,7 @@ import org.hibernate.annotations.Type;
 @Entity
 public class Task {
     @Id
-    @Type(type= "org.hibernate.type.PostgresUUIDType")
+    @Type(type = "org.hibernate.type.PostgresUUIDType")
     private UUID id;
     private String text;
 
